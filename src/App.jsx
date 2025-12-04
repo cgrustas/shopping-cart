@@ -1,5 +1,15 @@
-import "./App.css";
+import NavBar from "./components/NavBar";
+import { Outlet } from "react-router";
 
-const App = () => <h1>Our First Test</h1>;
-
-export default App;
+export default function App() {
+  return (
+    <div className="app-container">
+      <header>
+        <NavBar />
+      </header>
+      <main>
+        <Outlet />
+      </main>
+    </div>
+  );
+}

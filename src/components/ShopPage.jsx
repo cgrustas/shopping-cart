@@ -1,3 +1,3 @@
-export default function NavBar() {
-  return <h2>Shop Page</h2>;
+export default function ShopPage() {
+  return <h2>Shop</h2>;
 }
