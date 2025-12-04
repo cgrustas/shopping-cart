@@ -11,7 +11,9 @@ describe("routing behavior", () => {
 
     render(<RouterProvider router={router} />);
 
-    expect(screen.getByRole("heading", { name: /home/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /about us/i })
+    ).toBeInTheDocument();
   });
 
   describe("page navigation", () => {
@@ -49,14 +51,14 @@ describe("routing behavior", () => {
 
       await user.click(shopLink);
       expect(
-        screen.queryByRole("heading", { name: /home/i })
+        screen.queryByRole("heading", { name: /about us/i })
       ).not.toBeInTheDocument();
 
       const homeLink = screen.getByRole("link", { name: /home/i });
       await user.click(homeLink);
 
       expect(
-        screen.getByRole("heading", { name: /home/i })
+        screen.getByRole("heading", { name: /about us/i })
       ).toBeInTheDocument();
     });
   });
