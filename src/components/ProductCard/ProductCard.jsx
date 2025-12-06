@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ItemCounter from "./ItemCounter";
+import ItemCounter from "../ItemCounter/ItemCounter";
 
 export default function ProductCard({
   id,

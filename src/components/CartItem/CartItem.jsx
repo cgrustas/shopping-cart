@@ -1,4 +1,4 @@
-import ItemCounter from "./ItemCounter";
+import ItemCounter from "../ItemCounter/ItemCounter";
 
 export default function CartItem({
   cartItem,
