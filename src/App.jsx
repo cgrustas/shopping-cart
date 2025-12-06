@@ -2,6 +2,7 @@ import NavBar from "./components/NavBar/NavBar";
 import { Outlet } from "react-router";
 import useProducts from "./hooks/useProducts";
 import { useState } from "react";
+import styles from "./App.module.css";
 
 export default function App() {
   const { products, error, loading } = useProducts();
@@ -98,7 +99,7 @@ export default function App() {
   }
 
   return (
-    <div className="app-container">
+    <div className={styles.appContainer}>
       <header>
         <NavBar numCartItems={cartItems.length} />
       </header>
