@@ -1,9 +1,31 @@
-import { describe, test, expect } from "vitest";
+import { describe, test, expect, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { createMemoryRouter } from "react-router";
 import routes from "../src/routes";
 import { RouterProvider } from "react-router";
 import { userEvent } from "@testing-library/user-event";
+
+globalThis.fetch = vi.fn(() =>
+  Promise.resolve({
+    ok: true,
+    status: 200,
+    json: () =>
+      Promise.resolve([
+        {
+          id: 0,
+          title: "Test Product 1",
+          price: 10.0,
+          image: "test-product-1.png",
+        },
+        {
+          id: 1,
+          title: "Test Product 2",
+          price: 11.0,
+          image: "test-product-2.png",
+        },
+      ]),
+  })
+);
 
 describe("routing behavior", () => {
   test("home page shows on initial render", () => {
@@ -34,12 +56,12 @@ describe("routing behavior", () => {
       const router = createMemoryRouter(routes);
       render(<RouterProvider router={router} />);
       const user = userEvent.setup();
-      const homeLink = screen.getByRole("link", { name: /cart/i });
+      const cartLink = screen.getByRole("link", { name: /cart/i });
 
-      await user.click(homeLink);
+      await user.click(cartLink);
 
       expect(
-        screen.getByRole("heading", { name: /cart/i })
+        screen.getByRole("heading", { name: /shopping cart/i })
       ).toBeInTheDocument();
     });
 
