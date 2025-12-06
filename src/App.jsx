@@ -1,4 +1,4 @@
-import NavBar from "./components/NavBar";
+import NavBar from "./components/NavBar/NavBar";
 import { Outlet } from "react-router";
 import useProducts from "./hooks/useProducts";
 import { useState } from "react";

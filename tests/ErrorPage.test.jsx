@@ -1,6 +1,6 @@
 import { test, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import ErrorPage from "../src/components/ErrorPage";
+import ErrorPage from "../src/components/ErrorPage/ErrorPage";
 
 test("renders an error message", () => {
   render(<ErrorPage />);
