@@ -1,0 +1,17 @@
+.shopPage {
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-page);
+  gap: 3rem;
+}
+
+.title {
+  align-self: flex-start;
+  font-size: var(--heading-page);
+}
+
+.products {
+  display: grid;
+  gap: 6rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}

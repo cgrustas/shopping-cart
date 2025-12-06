@@ -1,5 +1,6 @@
 import { useOutletContext } from "react-router";
 import ProductCard from "../ProductCard/ProductCard";
+import styles from "./ShopPage.module.css";
 
 export default function ShopPage() {
   const { products, error, loading, onAddToCartClick } = useOutletContext();
@@ -8,9 +9,9 @@ export default function ShopPage() {
   if (error) return <p>A network error was encountered</p>;
 
   return (
-    <div className="shop-page">
-      <h2>Shop</h2>
-      <section className="products">
+    <div className={styles.shopPage}>
+      <h2 className={styles.title}>Shop</h2>
+      <section className={styles.products}>
         {products.map((product) => {
           return (
             <ProductCard
