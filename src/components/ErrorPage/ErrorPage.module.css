@@ -1,0 +1,14 @@
+.errorPage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding-page);
+  text-align: center;
+  gap: 1rem;
+}
+
+.errorMessage {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
