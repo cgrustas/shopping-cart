@@ -1,0 +1,27 @@
+.cartPage {
+  flex: 1;
+  background-color: var(--color-bg-light);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: var(--padding-page);
+  gap: 3rem;
+}
+
+.title {
+  align-self: flex-start;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.products {
+  display: grid;
+  gap: 6rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.emptyCartMessage {
+  align-self: flex-start;
+  font-size: 1.5rem;
+  font-weight: 600;
+}

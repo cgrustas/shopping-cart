@@ -43,7 +43,7 @@ export default function ProductCard({
         onDecrementClick={handleDecrementClick}
       />
       <div className={styles.cardFooter}>
-        <p className={styles.price}>{price.toFixed(2)}</p>
+        <p className={styles.price}>${price.toFixed(2)}</p>
         <button
           className={styles.addToCartBtn}
           onClick={() => {
