@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ItemCounter from "../ItemCounter/ItemCounter";
+import styles from "./ProductCard.module.css";
 
 export default function ProductCard({
   id,
@@ -32,25 +33,27 @@ export default function ProductCard({
   }
 
   return (
-    <article className="product-card">
-      <img src={image} alt="" />
-      <h3>{title}</h3>
-      <p>{price}</p>
+    <article className={styles.card}>
+      <img className={styles.img} src={image} alt="" />
+      <h3 className={styles.title}>{title}</h3>
       <ItemCounter
         quantity={quantity}
         onQuantityChange={(event) => handleQuantityChange(event)}
         onIncrementClick={handleIncrementClick}
         onDecrementClick={handleDecrementClick}
       />
-      <button
-        className="add-to-cart"
-        onClick={() => {
-          onAddToCartClick(id, quantity);
-          setQuantity(1);
-        }}
-      >
-        Add to Cart
-      </button>
+      <div className={styles.cardFooter}>
+        <p className={styles.price}>{price.toFixed(2)}</p>
+        <button
+          className={styles.addToCartBtn}
+          onClick={() => {
+            onAddToCartClick(id, quantity);
+            setQuantity(1);
+          }}
+        >
+          Add to Cart
+        </button>
+      </div>
     </article>
   );
 }

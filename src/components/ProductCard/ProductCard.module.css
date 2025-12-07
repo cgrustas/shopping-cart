@@ -1,0 +1,42 @@
+.card {
+  color: rgb(70, 70, 70);
+  display: grid;
+  grid-auto-rows: 250px 50px auto auto;
+  place-items: center;
+  gap: 1rem;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.img {
+  height: 250px;
+  object-fit: contain;
+}
+
+.title {
+  text-align: center;
+}
+
+.cardFooter {
+  justify-self: stretch;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addToCartBtn {
+  border: none;
+  appearance: none;
+  background-color: var(--color-bg-light);
+  color: rgb(70, 70, 70);
+  border-radius: 4px;
+  border: 1px solid rgb(70, 70, 70);
+}
+
+.addToCartBtn:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}

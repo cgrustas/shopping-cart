@@ -64,7 +64,8 @@ ul {
 }
 
 :root {
+  color: rgb(70, 70, 70);
+
   --color-bg-light: rgb(234, 237, 237);
-  --heading-page: 2rem;
   --padding-page: 3rem;
 }

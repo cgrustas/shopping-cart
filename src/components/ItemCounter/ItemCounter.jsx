@@ -1,3 +1,5 @@
+import styles from "./ItemCounter.module.css";
+
 export default function ItemCounter({
   quantity,
   onQuantityChange,
@@ -5,10 +7,11 @@ export default function ItemCounter({
   onDecrementClick,
 }) {
   return (
-    <div className="item-counter">
-      <div className="quantity-input-group">
+    <div className={styles.itemCounter}>
+      <div className={styles.quantityInputGroup}>
         <label htmlFor="quantity">Quantity: </label>
         <input
+          className={styles.quantityInput}
           type="number"
           id="quantity"
           name="quantity"
@@ -17,20 +20,20 @@ export default function ItemCounter({
           onChange={onQuantityChange}
         />
       </div>
-      <div className="quantity-btns">
+      <div className={styles.quantityBtns}>
         <button
-          className="increment"
+          className={styles.quantityBtn}
           aria-label="Increment quantity"
           onClick={onIncrementClick}
         >
-          ⌃
+          +
         </button>
         <button
-          className="decrement"
+          className={styles.quantityBtn}
           aria-label="Decrement quantity"
           onClick={onDecrementClick}
         >
-          ⌄
+          -
         </button>
       </div>
     </div>

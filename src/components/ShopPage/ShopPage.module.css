@@ -1,4 +1,5 @@
 .shopPage {
+  background-color: var(--color-bg-light);
   display: flex;
   flex-direction: column;
   padding: var(--padding-page);
@@ -7,7 +8,8 @@
 
 .title {
   align-self: flex-start;
-  font-size: var(--heading-page);
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .products {

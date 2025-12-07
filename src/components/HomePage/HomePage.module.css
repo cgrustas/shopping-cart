@@ -4,13 +4,14 @@
   flex-direction: column;
   align-items: center;
   background-color: var(--color-bg-light);
-  padding: 2rem;
+  padding: var(--padding-page);
   text-align: center;
   gap: 3rem;
 }
 
 .aboutUsHeading {
   font-size: 2rem;
+  font-weight: 600;
 }
 
 .aboutUsInfo {
