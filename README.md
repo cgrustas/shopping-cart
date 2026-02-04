@@ -1,6 +1,6 @@
 # Shopping Cart
 
-An e-commerce shopping cart application with React, built as part of [The Odin Project](https://www.theodinproject.com/) curriculum. This project ties together React Router, data fetching, testing, and CSS Modules.
+An e-commerce shopping cart application with React, built as part of [The Odin Project](https://www.theodinproject.com/) curriculum. This project ties together React Router, data fetching, testing, and CSS Modules. See [Live Demo](https://shopping-cart-ruddy-five.vercel.app/).
 
 ## Project Overview
 
